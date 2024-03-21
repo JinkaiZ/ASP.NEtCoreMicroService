@@ -11,7 +11,8 @@ builder.Services.AddIdentityServer()
     .AddInMemoryPersistedGrants()
     .AddInMemoryApiResources(Config.GetResource())
     .AddInMemoryApiScopes(Config.GetApiScopes())
-    .AddInMemoryClients(Config.GetClients());
+    .AddInMemoryClients(Config.GetClients())
+    .AddTestUsers(Config.GetTestUser());
 
 builder.Services.AddControllersWithViews(); 
 
